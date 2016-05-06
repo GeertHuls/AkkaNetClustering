@@ -6,6 +6,10 @@ namespace SampleActorSystem
     {
         static void Main(string[] args)
         {
+            ActorSystem
+               .Create("SampleActorSystem")
+               .Terminate()
+               .Wait();
         }
     }
 }
