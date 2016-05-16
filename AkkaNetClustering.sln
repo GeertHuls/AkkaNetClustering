@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleActorSystem", "Sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lighthouse", "Lighthouse\Lighthouse.csproj", "{87BE1ABF-1F59-41AB-A3CB-4B1E7E0B218A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{2CE7E46B-4CC6-43DA-8948-5C6584C2C199}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Globomantics", "Globomantics", "{DAF8BF24-0730-45EA-81C1-1D8FC379A172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Globomantics\API\API.csproj", "{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +27,17 @@ Global
 		{87BE1ABF-1F59-41AB-A3CB-4B1E7E0B218A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87BE1ABF-1F59-41AB-A3CB-4B1E7E0B218A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87BE1ABF-1F59-41AB-A3CB-4B1E7E0B218A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B44459C-4AAE-419F-99B6-AEE80D3B933F} = {2CE7E46B-4CC6-43DA-8948-5C6584C2C199}
+		{87BE1ABF-1F59-41AB-A3CB-4B1E7E0B218A} = {2CE7E46B-4CC6-43DA-8948-5C6584C2C199}
+		{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6} = {DAF8BF24-0730-45EA-81C1-1D8FC379A172}
 	EndGlobalSection
 EndGlobal
