@@ -10,3 +10,10 @@ This code is taken from the github pages itself:
 
 Use the lighthouse project in conjunction with either the sample app or the globomantics solution. Each project is located in its dedicated solution folder.
 Set each project as startup project accordingly.
+
+Next modify the lighthouse HOCON file to match the required setup. There are 3 sections:
+- lighthouse
+- akka.remote.helios.tpc
+- cluster
+
+Each section is marked with comments indicating where to change the configuration.
