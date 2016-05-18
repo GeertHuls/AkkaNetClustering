@@ -22,6 +22,6 @@ There is probably a much easier way how to configure this but that is out of sco
 ## Purpose
 
 Once the lighthouse project is up and running, you can start multiple instances of the the api app, which is the core of the project, being scaling out.
-Only start one instance of the client, it will round robin tasks around all running api nodes.
+Only start one instance of the client, it will round robin the login events around all running api nodes. The video played events are broadcasted.
 
 The SampleActorSystem is less relevant since it only show how to connect to the lighthouse seed node.
