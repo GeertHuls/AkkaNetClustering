@@ -6,12 +6,12 @@ using Akka.Actor;
 using Akka.Persistence;
 using Shared;
 
-namespace API.StatefulWorkers
+namespace StatefulWorkers
 {
    /// <summary>
    /// Request for all the videos a user has viewed
    /// </summary>
-   internal class PreviouslyWatchedVideosRequest
+   public class PreviouslyWatchedVideosRequest
    {
       public RecommendationJob Job { get; }
 
@@ -24,7 +24,7 @@ namespace API.StatefulWorkers
    /// <summary>
    /// Response containing all videos a user has viewed
    /// </summary>
-   internal class PreviouslyWatchedVideosResponse
+   public class PreviouslyWatchedVideosResponse
    {
       public RecommendationJob Job { get; }
 
@@ -42,7 +42,7 @@ namespace API.StatefulWorkers
    /// Durable store of which users have viewed which videos
    /// Can be queried for which videos a user has viewed
    /// </summary>
-   internal class VideosWatchedStore : PersistentActor//Part of Akka.Persistence
+   public class VideosWatchedStore : PersistentActor//Part of Akka.Persistence
    {
       private List<VideoWatchedEvent> _store = new List<VideoWatchedEvent>();
 

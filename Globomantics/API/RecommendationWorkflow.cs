@@ -4,28 +4,12 @@ using System.Linq;
 using Akka.Actor;
 using Akka.Routing;
 using API.Helpers;
-using API.StatefulWorkers;
-using API.StatelessWorkers;
 using Shared;
+using StatefulWorkers;
+using StatelessWorkers;
 
 namespace API
 {
-   /// <summary>
-   /// Initiates the recommendation workflow for a user
-   /// </summary>
-   internal class RecommendationJob
-   {
-      public int UserId { get; }
-
-      public IActorRef Client { get; }
-
-      public RecommendationJob(int userId, IActorRef client)
-      {
-         UserId = userId;
-         Client = client;
-      }
-   }
-
    /// <summary>
    /// Performs all the collaboration required to create a recommendation.
    /// One recommendation per actor, lives for the lifetime of the lifecycle
@@ -112,11 +96,11 @@ namespace API
          Receive<PreviouslyWatchedVideosResponse>(resp =>
          {
             _videoDetails
-               .Ask<UnwatchedVideosResponse>(new UnwatchedVideosRequest(resp.Job, resp.PreviouslySeenVideoIds), TimeSpan.FromSeconds(20))
+               .Ask<UnseenVideosResponse>(new UnseenVideosRequest(resp.Job, resp.PreviouslySeenVideoIds), TimeSpan.FromSeconds(20))
                .PipeTo(Self);
          });
 
-         Receive<UnwatchedVideosResponse>(unseen =>
+         Receive<UnseenVideosResponse>(unseen =>
          {
             var recommendedVideos = unseen.UnseenVideos
                   .OrderByDescending(v => v.Rating)
