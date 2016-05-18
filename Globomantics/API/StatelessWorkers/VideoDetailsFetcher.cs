@@ -1,6 +1,6 @@
 ﻿using System;
 using Akka.Actor;
-using API.Domain;
+using Shared.Domain;
 
 namespace API.StatelessWorkers
 {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using API.Domain;
-using static API.Domain.Genre;
+using Shared.Domain;
+using static Shared.Domain.Genre;
 using static System.TimeSpan;
 
 namespace API.StatelessWorkers

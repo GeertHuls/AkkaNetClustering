@@ -4,6 +4,7 @@ using System.Linq;
 using Akka;
 using Akka.Actor;
 using Akka.Persistence;
+using Shared;
 
 namespace API.StatefulWorkers
 {

@@ -83,9 +83,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Globomantics\API\API.csproj">
-      <Project>{77A3E3D7-D903-417B-8C9B-62E9E5A8A3D6}</Project>
-      <Name>API</Name>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{774bf985-4b53-4bc5-a041-be4fbb690bcd}</Project>
+      <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

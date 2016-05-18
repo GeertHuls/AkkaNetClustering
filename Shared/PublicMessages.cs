@@ -1,6 +1,6 @@
-﻿using API.Domain;
+﻿using Shared.Domain;
 
-namespace API
+namespace Shared
 {
    /// <summary>
    /// Messages available outside of this assembly
