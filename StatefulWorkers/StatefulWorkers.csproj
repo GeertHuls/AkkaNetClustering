@@ -88,7 +88,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shared\Shared.csproj">
+    <ProjectReference Include="..\Globomantics\Shared\Shared.csproj">
       <Project>{774bf985-4b53-4bc5-a041-be4fbb690bcd}</Project>
       <Name>Shared</Name>
     </ProjectReference>

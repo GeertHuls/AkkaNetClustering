@@ -93,10 +93,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Shared.csproj">
-      <Project>{774bf985-4b53-4bc5-a041-be4fbb690bcd}</Project>
-      <Name>Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\StatefulWorkers\StatefulWorkers.csproj">
       <Project>{a73f61b6-da78-43f8-93c9-e223123ea7b6}</Project>
       <Name>StatefulWorkers</Name>
@@ -104,6 +100,10 @@
     <ProjectReference Include="..\..\StatelessWorkers\StatelessWorkers.csproj">
       <Project>{1915b999-4344-486f-aa12-c5bff66197ce}</Project>
       <Name>StatelessWorkers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{774bf985-4b53-4bc5-a041-be4fbb690bcd}</Project>
+      <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
